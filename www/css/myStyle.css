@@ -1,0 +1,20 @@
+  .scroll-content {
+    background: url(image) [add image position info here];
+
+    [add any more properties here]
+
+  }
+
+
+/* <div class="login"></div>*/
+  .login {
+    background: url(img/loading1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 80%;
+    height: 246px;
+    margin: auto;
+    z-index: 2;
+    position: relative;
+}

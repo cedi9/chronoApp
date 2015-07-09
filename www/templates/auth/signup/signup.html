@@ -1,0 +1,64 @@
+<ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Sign Up</h1>
+    
+  </ion-header-bar>
+  <ion-content>
+
+      <form name="testForm" novalidate ng-submit="submit()">
+
+        <div class="list">
+          <label class="item item-input">
+            <span class="input-label">User Name</span>
+            <input type="text" name="username" ng-model="data.username" ng-required="true" ng-minlength="6" ng-maxlength="20">
+          </label>
+            
+          <div class="item errors">
+            
+            <p ng-show="testForm.username.$error.required">User Name is required</p>
+            <p ng-show="testForm.username.$error.minlength">User Name is too short</p>
+            <p ng-show="testForm.username.$error.maxlength">User Name is too long</p>
+          </div>              
+
+          <label class="item item-input">
+            <span class="input-label">Last Name</span>
+            <input type="text" name="lastname" ng-model="data.lastname" required ng-minlength="4" ng-maxlength="10">
+          </label>
+
+          <div class="item errors">
+           
+            <p ng-show="testForm.lastname.$error.required">Last name is required</p>
+            <p ng-show="testForm.lastname.$error.minlength">Last name is too short</p>
+            <p ng-show="testForm.lastname.$error.maxlength">Last name is too long</p>
+          </div>              
+
+        </div>        
+
+
+
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="loginData.password">
+        </label>
+
+
+         <div class="item item-input item-select">
+        <div class="input-label">
+          Select Country
+        </div>
+        <select ng-model="country" ng-init="country=countries[0]" ng-options="country.name for country in countries"></select></div>
+      <div class="item item-input item-input">
+        <span class="input-label">Number</span>
+        <input type="text" ng-model="country.dial_code">
+      </div>
+ 
+
+        <label class="item">
+          
+        <button class="button button-balanced">Submit</button> <span>Submitted {{data.submissions}} times.  Fields Submitted : {{data.summary}}</span>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view>
